@@ -1,0 +1,52 @@
+<! DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <title>Study Group Matching</title>
+    <link rel= "stylesheet" href = "styles.css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "column" id = "section1">Section 1</div>
+        <h1>Create Your Profile</h1>
+        <form id= "profileForm" action = "submit_profile.php" method = "post">
+            <!-- Personal Information -->
+            <label for = "firstName">First Name:</label>
+            <input type = "text" id = "firstName" name = "firstName" required>
+
+            <label for = "lastName">Last Name Initial:</label>
+            <input type = "text" id = "lastName" name = "lastName" required>
+
+            <!-- Contact Information -->
+            <label for = "email">UT Email:</label>
+            <input type = "email" id = "email" name = "email" required>
+
+            <label for = "phone">Phone Number (optional):</label>
+            <input type = "tel" id = "phone" name = "phone" pattern = "[0-9]{10}" placeholder = "1234567890" optional>
+
+            <!-- Subjects of Interest -->
+
+            <label for = "subjects">Subjects of Interest (comma-separated):</label>
+            <input type = "text" id = "subjects" name = "subjects" required>
+
+            <!-- Study Times -->
+            <label for = "studyTimes">Preferred Study Times:</label>
+            <select id= "studyTimes" name = "studyTimes" multiple required>
+                <option value = "morning">Morning</option>
+                <option value = "afternoon">Afternoon</option>
+                <option value = "Evening">Evening</option>
+            </select>
+
+            <label for = "location" > Location Preference: </label>
+            <input type ="text" id = "location" name = "location">
+
+            <button type = "submit">Create Profile</button>
+
+            <div class = "column" id = "section2">Section 2</div>
+            <div class = "column" id = "section3">Section 3</div>
+
+        </form>
+    </div>
+</body>
+</html>
